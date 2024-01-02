@@ -5,7 +5,6 @@ const Authenticate = ({token}) => {
     const [error, setError] = useState(null);
     const [successMessage, setSuccessMessage] = useState(null);
     const [username, setUsername] = useState(null);
-    // const userName = successMessage !== null && successMessage.data ? successMessage.data.username : "";
 
     const handleClick = async (event) => {
         event.preventDefault();
@@ -24,9 +23,9 @@ const Authenticate = ({token}) => {
             );
 
             const result  = await response.json();
-            console.log(result);
+            // console.log(result);
             setSuccessMessage(result.message);
-            console.log(result.data);
+            // console.log(result.data);
             setUsername(result.data.username);
             console.log(result.data.username);
 
